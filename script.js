@@ -19,33 +19,4 @@ const btn = document.querySelectorAll(".cta-button");
 // var coll = document.getElementsByClassName("collapsible");
 let i;
 
-for (i = 0; i < btn.length; i++) {
-  btn[i].addEventListener("click", function() {
-    this.classList.toggle("active");
-    var content = this.previousElementSibling;
-    if (content.style.maxHeight){
-      content.style.maxHeight = null;
-    } else {
-      content.style.maxHeight = content.scrollHeight + "px";
-    } 
-  });
-}
 
-
-// btn.forEach((button, index) => {
-//     button.addEventListener("click", () => {
-//        const p = document.querySelector(`.${numberToString[index]}`);
-//        console.log(p);
-//        p.style.display = p.style.display === "block" ? "none" : "block" 
-//     });
-// });
-
-const navList = document.querySelector('nav ul');
-navList.addEventListener('click', (event) => {
-    if (event.target.tagName === 'A') {
-        event.preventDefault();
-        const selectedLi = event.target.parentElement;
-        // do something with the selected li
-        console.log(selectedLi);
-    }
-});

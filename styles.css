@@ -1,129 +1,152 @@
-* {
-    font-family: 'Inter', sans-serif;
-    box-sizing: border-box;
-}
-
-body {font-family: Arial, sans-serif;
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 0;
 }
 
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header Styles */
 header {
-    padding-top: 30px;
-	display: flex;
-    align-items: center;
-    /* position: relative; */
-    justify-content: space-around;
-    height: 10vh;
-    
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
 }
 
-.hero, header {
-    background-color: #2C3E50;
-    color: white;
+header h1 {
+    margin: 0;
+    font-size: 24px;
 }
 
-header nav ul{
-    display: flex;
-    list-style-type: none;
-    column-gap: 15px;
-}
-
-video::-webkit-media-controls {
-    display: none;
-  }
-  
-a {
-    color: white;
-}
-
-.cta-button {
-    background-color: #EFC20F;
-    color: black;
-    padding: 10px;
-    outline: none;
-    border: none;
-    border-radius: 7px;
-}
-
-.hero-p {
-    line-height: 20px;
-}
-
-.card-image {
-    width: 100%;
-    border-radius: 20px;
-    height: 240px;
-    object-fit: cover;
+/* Main Styles */
+.main-content {
+    background-color: cornflowerblue;
+    padding: 20px;
 }
 
 .card {
-    flex-basis: 30%;
+    background-color: rgb(232, 231, 238);
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
 }
 
-.card-holder {
-    display: flex;
-    flex-wrap: wrap;
-    column-gap: 10px;
-    row-gap: 10px;
-    justify-content: space-evenly;
-    
-}
-
-.about {
-    background-color: #5E7082;
-    color: white;
-    padding: 60px;
-}
-.hidden {
-    display: none;
-}
-/* 
-.para {
-    display: none;
-} */
-
-.collapsible {
-    background-color: #777;
-    color: white;
-    cursor: pointer;
-    padding: 18px;
+.card img {
     width: 100%;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.card h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.content {
+    margin-bottom: 20px;
+}
+
+.cta-button {
+    background-color: #333;
+    color: #fff;
     border: none;
-    text-align: left;
-    outline: none;
-    font-size: 15px;
-  }
+    border-radius: 4px;
+    padding: 8px 16px;
+    font-size: 16px;
+}
+
   
-  .active, .collapsible:hover {
-    background-color: #555;
-  }
-  
-  .content {
-    padding: 0 18px;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.2s ease-out;
-    background-color: #f1f1f1;
-  }
+
+/* Testimonials Styles */
 .testimonials {
-    background-color: #000000;
-    color: white;
-    padding: 60px;
-    margin: 10px;
+    background-color: beige;
+    padding: 20px;
+    margin-bottom: 20px;
 }
-.contact{
-    background-color: #d45602;
-    padding: 60px;
-    margin: 10px;
+
+.testimonial {
+    margin-bottom: 20px;
 }
-@media (max-width: 600px) {
-    body {
-        flex-direction: column;
-        align-items: center;
+
+.testimonial p {
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
+.testimonial .author {
+    font-weight: bold;
+}
+
+/* Contact Styles */
+.contact {
+    background-color: darkorange;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.contact h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.contact h3 {
+    margin-bottom: 10px;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 20px;
     }
+
+    .card {
+        padding: 10px;
+    }
+
+    .card h3 {
+        font-size: 18px;
+    }
+
+    .cta-button {
+        font-size: 14px;
+    }
+
+    footer {
+        font-size: 14px;
+    }
+}
+.about {
+    background-color: #f8f9fa; /* Add your desired background color here */
+    padding: 40px 0;
+}
+.about .container {
+    background-color: lightslategrey; /* Set the container background color to white */
+    padding: 20px;
+    border-radius: 5px;
+}
+.card-text {
+    display: none;
+}
+.card-text.show {
+    display: block;
+}
+.card-title {
+    margin-bottom: 10px;
+}
+.cta-button {
+    margin-top: 20px;
 }
